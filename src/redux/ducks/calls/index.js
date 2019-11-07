@@ -1,15 +1,18 @@
 import Axios from "axios"
+// import React, { useEffect} from 'react'
+// import { useSelector, useDispatch } from 'react-redux'
 
 // action names
 const LIST_USER = "calls/LIST_USER"
 const LIST_REPOS = "calls/LIST_REPOS"
 
-// reducer
+// initial state
 const initialState = {
   repos: [],
   user: {}
 }
 
+// reducer 
 export default function reducer(state = initialState, action) {
   switch (action.type) {
     case LIST_USER:
@@ -45,3 +48,18 @@ export function showRepos() {
     })
   }
 }
+
+// custom hooks
+
+// export function useGithub() {
+//   const dispatch = useDispatch()
+//   const user = useSelector(appState => appState.repoReducer.user)
+//   const repos = useSelector(appState => appState.repoReducer.repos)
+
+//   useEffect(() => {
+//     dispatch(showUser())
+//     dispatch(showRepos())
+//   }, [])
+
+//   return { user, repos }
+// }

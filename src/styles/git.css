@@ -32,6 +32,7 @@ p, i, button, img {
 
 .left a {
     color: inherit;
+    outline: none;
 }
 
 .left i {
@@ -73,6 +74,7 @@ p, i, button, img {
     padding: 5px;
     border: 1px solid #ccc;
     margin: 0;
+    width: 300px;
 }
 
 .side h3 {
@@ -141,8 +143,35 @@ p, i, button, img {
     font-size: 20px;
 }
 
+.description {
+    display: flex;
+    align-items: center;
+}
+
+.description p {
+    margin-left: 30px;
+}
+
 h4 {
     font-weight: 300;
+}
+
+.red {
+    height: 10px;
+    width: 10px;
+    background-color: red;
+    border-radius: 50%;
+    display: inline-block;
+    margin:  1px 5px;
+}
+
+.yellow {
+    height: 10px;
+    width: 10px;
+    background-color: yellow;
+    border-radius: 50%;
+    display: inline-block;
+    margin: 1px 5px;
 }
 
 .onerepo button {

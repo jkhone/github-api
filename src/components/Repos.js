@@ -2,6 +2,7 @@ import React, { useEffect} from 'react'
 import { useSelector, useDispatch } from 'react-redux'
 import { showRepos } from '../redux/ducks/calls'
 import Icon from '../lib/Icon'
+import Moment from 'react-moment';
 
 function Repos(props) {
     const repos = useSelector(appState => appState.repoReducer.repos)
@@ -31,8 +32,23 @@ function Repos(props) {
             {repos.map((repo, i) => (
                 <div key={'repo' + i} className='onerepo'>
                     <div>
-                    <a href={repo.html_url}><p>{repo.name}</p></a>
-                    <h4>{repo.language}</h4>
+                        <a target='_blank' rel="noopener noreferrer" href={repo.html_url}><p>{repo.name}</p></a>
+                        <div className='description'>
+                            <h4>
+                                <span 
+                                className=
+                                {(() => {
+                                    switch (repo.language) {
+                                    case "JavaScript": return "red";
+                                    case "HTML":    return "yellow";
+                                    default:              return "";
+                                    }
+                                })()}>
+                                </span>
+                                {repo.language}
+                            </h4>
+                            <p>Updated <Moment fromNow>{repo.updated_at}</Moment></p>
+                        </div>
                     </div>
                     <button><Icon icon='star'/> Star</button>
                 </div>

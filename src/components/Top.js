@@ -6,7 +6,7 @@ function Top(props) {
     return (
         <div className='top'>
             <div className='left'>
-                <a href='https://github.com/'><Icon icon='github'/></a>
+                <a target='_blank' rel="noopener noreferrer" href='https://github.com/'><Icon icon='github'/></a>
                 <input type='text' placeholder='Search or jump to...'/>
                 <p>Pull request</p>
                 <p>Issues</p>
