@@ -1,0 +1,153 @@
+.app {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: 
+    'top top top top'
+    'side repos repos repos'
+    ;
+}
+
+p, i, button, img {
+    cursor: pointer;
+}
+
+.top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgb(37, 41, 45);
+    color: white;
+    width: 100%;
+    height: 65px;
+    grid-area: top;
+}
+
+.left {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.left a {
+    color: inherit;
+}
+
+.left i {
+    font-size: 38px;
+}
+
+.left input {
+    width: 300px;
+    height: 25px;
+    border-radius: 3px;
+    outline: none;
+    padding: 5px;
+    background: rgb(64, 68, 71);
+    border: none;
+}
+
+.left input::placeholder {
+    color: rgb(141, 144, 145);
+}
+
+.right {
+    width: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.side {
+    margin: 25px 60px;
+    grid-area: side;
+}
+
+.side img {
+    width: 300px;
+    border: 1px solid #ccc;
+}
+
+.side p {
+    padding: 5px;
+    border: 1px solid #ccc;
+    margin: 0;
+}
+
+.side h3 {
+    font-weight: 300;
+}
+
+.side button {
+    width: 300px;
+    height: 30px;
+    background: rgb(241, 237, 237);
+    border-radius: 3px;
+}
+
+.repos {
+    grid-area: repos;
+    margin-top: 25px;
+    margin-right: 50px;
+}
+
+.categories {
+    display: flex;
+    justify-content: space-evenly;
+    border-bottom: 1px solid grey;
+}
+
+.search {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+    border-bottom: 1px solid grey;
+}
+
+.search input {
+    height: 30px;
+    width: 60%;
+    border-radius: 3px;
+    border: 1px solid #ccc;
+    padding: 5px;
+    outline: none;
+}
+
+.search button {
+    width: 10%;
+    height: 30px;
+    background: rgb(241, 237, 237);
+    border-radius: 3px;
+}
+
+.search .new {
+    background: rgb(86, 170, 85);
+    color: white;
+}
+
+.onerepo {
+    border-bottom: 1px solid #ccc;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.onerepo a {
+    color: rgb(37, 107, 207);
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+h4 {
+    font-weight: 300;
+}
+
+.onerepo button {
+    height: 30px;
+    width: 60px;
+    background: rgb(241, 237, 237);
+    border-radius: 3px;
+}
